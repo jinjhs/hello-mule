@@ -12,5 +12,6 @@ http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/jso
         <http:listener config-ref="HTTP_Listener_Configuration" path="/hello" doc:name="HTTP"/>
         <set-payload value="#[['message':&quot;Hello Mule&quot;]]" doc:name="Set Payload"/>
         <json:object-to-json-transformer doc:name="Object to JSON"/>
+        <logger message="Just logging" level="INFO" doc:name="Logger"/>
     </flow>
 </mule>
